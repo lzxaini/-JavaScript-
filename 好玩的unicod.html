@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo</title>
+	<style>
+		body{
+			background-color: black;
+		}
+		#love{
+			font-family: 新宋体,楷体,微软雅黑;
+			color: #fff;
+			font-size: 18px;
+			text-shadow: 2px 2px 3px #eee;
+		}
+	</style>
+</head>
+<body>
+	<!-- <marquee id="love"></marquee> -->
+	<script>
+		var str = ["\u6211\u559C\u6B22\u4F60 ，\u5728\u5F88\u65F6\u5019\u4E5F\u559C\u6B22\u8FC7\u5F88\u591A\u4EBA ，\u5728\u5979\u4EEC\u50CF\u4F60\u7684\u65F6\u5019！"];
+		alert(str);
+		for (var i = 0; i<50; i++) {
+			var love = str;
+			// document.getElementById("love").innerHTML=love;
+			var body = document.getElementsByTagName('body')[0];
+			var like = document.createElement("marquee");
+			like.id = "love";
+			body.appendChild(like).innerHTML=love;
+			// document.writeln(love);
+			console.log(love);
+		}
+	</script>
+</body>
+</html>

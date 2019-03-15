@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>动态获取并且插入手机号</title>
+<style>
+body{
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+	#nav{
+		width:100%;
+		height:60px;
+		position:fixed;
+		top:0;left:0;
+		background-color: red;
+	}
+	#error-user,#error-password,#error-phone-number{
+		font-size: 16px;
+		color: red;
+	}
+	#user,#password,#sjh{
+		width: 200px;
+		height: 25px;
+		margin: 5px auto;
+		border-radius: 5px;
+	}
+	.main{
+		margin: 100px;
+	}
+	#btn{
+		width: 50px;
+		height: 30px;
+		font-size: 17px;
+		line-height: 30px;
+		color: #FFF;
+		background-color: green;
+		cursor:pointer;
+		border:1px solid #ccc;
+		border-radius: 20px;
+		box-shadow: 2px 2px 3px #ccc;
+	}
+	.btn{
+		width: 200px;
+		height: 30px;
+		font-size: 17px;
+		line-height: 30px;
+		color: #666;
+		background-color: orange;
+		cursor:pointer;
+		border:1px solid #ccc;
+		border-radius: 20px;
+		box-shadow: 2px 2px 3px #ccc;
+	}
+	.logo{
+		width: 150px;
+		height: 150px;
+		line-height: 150px;
+		margin: 10px auto;
+		border:1px solid #ccc;
+		border-radius: 100%;
+		background-color: #fff;
+		box-shadow: 2px 2px 3px #ccc;
+	}
+</style>
+<script src="verify-from.js"></script>
+</head>
+<body>
+<form onsubmit="return verify_submit()" action="123.html">
+	<div class="main">
+		<div class="logo">LOGO占位</div>
+		<div>
+			<input type="text" name="" id="user" placeholder="请输入不少于三位的用户名！" onblur="return verify_user()">
+		</div>
+		<span id="error-user">*</span>
+		<div>
+			<input type="password" name="" id="password" onblur="return verify_password()" placeholder="请输入不少于六位的密码！">
+		</div>
+		<span id="error-password">*</span>
+		<div>
+			<input type="text" id="sjh" placeholder="请输入注册手机号！" onblur="return verify_checkPhone()"/>
+		</div>
+		<div>
+			<input type="button" id="btn" value="验证" onclick="return verify_checkPhone_null()"/>
+		</div>
+		<span id="error-phone-number">*</span>
+		<div>
+			<input type="submit" name="" value="确认提交" class="btn">
+		</div>				
+	</div>
+</form>
+</body>
+</html>
